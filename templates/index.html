@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>BREAST CANCER PREDICTION</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+</head>
+
+<body>
+
+
+
+
+<style>
+body {
+  background-image: url("static/canser.jpg");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+<h2>BREAST CANCER PREDICTION</h2>
+    <h2> PREDICTOR</h2><br>
+<br>
+
+ <div class="login">
+	
+<br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="mean radius" placeholder="Enter the mean radius Value" required="required" />
+      <input type="text" name="mean texture" placeholder="enter the mean texture Value" required="required" />
+      <input type="text" name="mean perimeter" placeholder="enter the mean perimeter Value" required="required" />
+      <input type="text" name="mean area" placeholder="enter the mean area Value" required="required" />
+      <input type="text" name="mean smoothness" placeholder="enter the mean smoothness Value" required="required" />
+      <input type="text" name="mean compactness" placeholder="enter the mean compactness Value" required="required" />
+      <input type="text" name="mean concavity" placeholder="enter the mean concavity AGE " required="required" />
+      <input type="text" name="mean concave points" placeholder="enter the mean concave points DIS" required="required" />
+      <input type="text" name="mean symmetry" placeholder="enter the mean symmetry value" required="required" />
+      <input type="text" name="mean fractal dimension" placeholder="enter the mean fractal dimension value" required="required" />
+      <input type="text" name="radius error" placeholder="enter the radius error vlaue" required="required" />
+      <input type="text" name="texture error" placeholder="enter the texture error value" required="required" />
+      <input type="text" name="perimeter erro" placeholder="enter the perimeter erro vlaue" required="required" />
+      <input type="text" name="area error" placeholder="enter the area error vlaue" required="required" />
+      <input type="text" name="smoothness error" placeholder="enter the smoothness error vlaue" required="required" />
+      <input type="text" name="compactness error" placeholder="enter the compactness error vlaue" required="required" />
+      <input type="text" name="concavity error" placeholder="enter the concavity error vlaue" required="required" />
+      <input type="text" name="concave points error" placeholder="enter the concave points error vlaue" required="required" />
+      <input type="text" name="symmetry error" placeholder="enter the symmetry error vlaue" required="required" />
+      <input type="text" name="fractal dimension error" placeholder="enter the fractal dimension error vlaue" required="required" />
+      <input type="text" name="worst radius" placeholder="enter the worst radius vlaue" required="required" />
+      <input type="text" name="worst texture" placeholder="worst texture" required="required" />
+      <input type="text" name="worst perimeter" placeholder="enter the worst perimeter vlaue" required="required" />
+      <input type="text" name="worst area" placeholder="enter the worst area vlaue" required="required" />
+      <input type="text" name="worst smoothness" placeholder="enter the worst smoothness vlaue" required="required" />
+      <input type="text" name="worst compactness" placeholder="enter the worst compactness vlaue" required="required" />
+      <input type="text" name="worst concavity" placeholder="enter the worst concavity vlaue" required="required" />
+      <input type="text" name="worst concave points" placeholder="enter the worst concave points vlaue" required="required" />
+      <input type="text" name="worst symmetry" placeholder="enter the worst symmetry vlaue" required="required" />
+      <input type="text" name="worst fractal dimension" placeholder="enter the worst fractal dimension vlaue" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   <br>
+   <br>
+ </div>
+
+
+</body>
+</html>
